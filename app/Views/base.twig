@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <title>Giphy Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full flex flex-col justify-center items-center">
+<div class="flex justify-between items-center bg-gray-100 p-4">
+    <div class="flex items-center space-x-4">
+        <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Trending</a>
+        <a href='/random' class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Random</a>
+    </div>
+    <div class="flex items-center space-x-2">
+        <form action="/search" method="GET" class="flex justify-center items-center">
+            <input type="text"
+                   name="search"
+                   class="w-full rounded-md px-4 py-2 border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                   placeholder="Search...">
+            <input type="number"
+                   name="count"
+                   min="1"
+                   max="25"
+                   value="10"
+                   class="w-20 rounded-md px-2 py-2 border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                   placeholder="# of gifs">
+            <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+
+{% block body %}{% endblock %}

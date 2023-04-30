@@ -1,0 +1,14 @@
+{% extends'base.twig' %}
+
+{% block body %}
+    <div class="flex justify-center">
+        <h1 class="text-2xl  py-4"><strong>Displaying searched results for "{{ query }}" gifs:</strong></h1>
+    </div>
+    <div class="flex justify-center items-center flex-wrap h-full">
+        {% for gifUrl in gifs %}
+                <img class="mx-4" src="{{ gifUrl.getUrl() }}" alt="GIF">
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
